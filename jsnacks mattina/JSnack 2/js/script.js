@@ -31,10 +31,10 @@ const bici = [
 let piuLeggera = bici[0];
 bici.forEach (element => {
 
-  if (bici[i].peso < piuLeggera.peso) {
+  if (piuLeggera.peso > element.peso) {
     piuLeggera = element;
   }
 
-}
+});
 
-console.log(piuLeggera.nome + ' è la più leggera! Pesa ' + piuLeggera.peso + ' kg')
+console.log(`${piuLeggera.nome} è la bici più leggera! Pesa ${piuLeggera.peso} kg`)

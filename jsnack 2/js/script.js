@@ -18,14 +18,21 @@ const arrayObj = [
 ];
 
 //variabili
-const arrayCopy = [];
+//const arrayCopy = [];    //var da usare con il forEach
 const randomLetter = "abcdefghijklmnopqrstuvwxyz";
 
-//ciclo for each
+// con ciclo map
+const arrayCopy = arrayObj.map((element) => {
+  return {...element, position: randomLetter[Math.floor(Math.random() * randomLetter.length)]}
+});
+
+/*
+//con ciclo for each
 arrayObj.forEach((element) => {
   const newObj = {...element, position: randomLetter[Math.floor(Math.random() * randomLetter.length)]};
   arrayCopy.push(newObj);
 });
+*/
 
 console.log(arrayObj);
 console.log(arrayCopy);

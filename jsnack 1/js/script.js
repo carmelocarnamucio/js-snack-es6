@@ -9,16 +9,15 @@ let num1 = parseInt(prompt("inserisci un numero da 0 e " + (myArray.length-1)));
 let num2 = parseInt(prompt("inserisci un numero da 0 e " + (myArray.length-1)));
 
 
-// se il primo numero è maggiore del secondo
+// se il num1 è maggiore di num2
+  if (num1 > num2) {
+    [num1, num2] = [num2, num1];
+  }
+
 newArray = myArray.filter((element, i) => {
   return num1 <= i && num2 >= i
 });
 
-myArray.forEach((element, i) => {
-  if (num1 <= i && num2 >= index) {
-    newArray.push(element)
-  }
-});
 
 console.log(myArray);
 console.log(newArray);
